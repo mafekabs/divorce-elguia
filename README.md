@@ -322,3 +322,9 @@ Frontend order:
 Week 1: Build Find Help plus 3 guides (Divorce Summons, Maintenance, Protection Order) plus Free State directory only.
 Week 2: Test with 5 real people in Bloemfontein. Watch them use it, see where they get stuck.
 Week 3: Add Deadline Calculator plus WhatsApp share, launch on Facebook community groups.
+
+
+## ENTITY RELATIONSHIP DIAGRAM
+<p align="center">
+  <img src="images/ERD.png" alt="Project ERD" width="500">
+</p>
