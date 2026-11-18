@@ -1,4 +1,4 @@
-package za.co.mafeka.divorceelguia.controller;
+package za.co.mafeka.divorceelguia.controller.appointment;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

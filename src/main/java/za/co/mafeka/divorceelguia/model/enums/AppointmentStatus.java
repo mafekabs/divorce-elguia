@@ -1,7 +1,11 @@
 package za.co.mafeka.divorceelguia.model.enums;
 
 public enum AppointmentStatus {
-    REQUESTED("REQUESTED"), CONFIRMED("CONFIRMED"), COMPLETED("CONFIRMED"), MISSED("MISSED");
+    REQUESTED("REQUESTED"),
+    CONFIRMED("CONFIRMED"),
+    COMPLETED("CONFIRMED"),
+    MISSED("MISSED");
+
     private final String status;
 
     AppointmentStatus(String status) {

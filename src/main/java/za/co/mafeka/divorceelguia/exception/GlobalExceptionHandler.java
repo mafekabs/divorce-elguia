@@ -1,5 +1,7 @@
 package za.co.mafeka.divorceelguia.exception;
 
+import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -17,18 +19,18 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(LegalServiceNotFoundException.class)
-    public ResponseEntity<ApiResponse<Object>> handleNotFound(LegalServiceNotFoundException ex) {
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<ApiResponse<Object>> handleNotFound(EntityNotFoundException ex) {
         return build(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
-    @ExceptionHandler(LegalServiceAlreadyExistsException.class)
-    public ResponseEntity<ApiResponse<Object>> handleAlreadyExists(LegalServiceAlreadyExistsException ex) {
+    @ExceptionHandler(EntityExistsException.class)
+    public ResponseEntity<ApiResponse<Object>> handleAlreadyExists(EntityExistsException ex) {
         return build(HttpStatus.CONFLICT, ex.getMessage());
     }
 
-    @ExceptionHandler(LegalServiceValidationException.class)
-    public ResponseEntity<ApiResponse<Object>> handleValidation(LegalServiceValidationException ex) {
+    @ExceptionHandler(EntityValidationException.class)
+    public ResponseEntity<ApiResponse<Object>> handleValidation(EntityValidationException ex) {
         return build(HttpStatus.BAD_REQUEST, ex.getMessage());
     }
 

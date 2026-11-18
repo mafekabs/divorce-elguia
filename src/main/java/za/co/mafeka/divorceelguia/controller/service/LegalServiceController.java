@@ -1,4 +1,4 @@
-package za.co.mafeka.divorceelguia.controller;
+package za.co.mafeka.divorceelguia.controller.service;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -36,7 +36,7 @@ public class LegalServiceController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<LegalServiceResponse>>> getAll() {
+    public ResponseEntity<ApiResponse<LegalServiceResponse>> getAll() {
         return ResponseEntity.ok(service.getAllOrdered());
     }
 
